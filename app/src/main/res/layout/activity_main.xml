@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Задание(напишешь свое)"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:padding="4dp"
+        android:id="@+id/linearOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/my_background"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task"
+        app:layout_constraintWidth_percent=".4">
+
+
+        <TextView
+            android:id="@+id/textOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Слова длина которых больше заданного числа n"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearTwo"
+        android:padding="4dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/my_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task"
+        app:layout_constraintWidth_percent=".4">
+
+        <TextView
+            android:id="@+id/textTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Слова длина которых меньше или равно заданного числа n"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textInputN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Введите n - длину слова"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearOne" />
+
+    <EditText
+        android:id="@+id/editInputN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Введите n - длину слова"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputN" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/butOne"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editInputN"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/my_background"
+        android:layout_marginTop="4dp"
+        android:text="Вывести слова в неотсортированном порядке"
+        android:textColor="@color/black"
+        android:enabled="false"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/butTwo"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/my_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/butOne"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="4dp"
+        android:text="Вывести слова  в отсортированном порядке"
+        android:textColor="@color/black"
+        android:enabled="false"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/my_background"
+        android:id="@+id/butThree"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/butTwo"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="4dp"
+        android:text="Очистить!"
+        android:textColor="@color/black"
+        android:enabled="false"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
