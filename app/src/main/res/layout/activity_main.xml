@@ -81,6 +81,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearOne" />
 
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/textInputN" />
+
     <EditText
         android:id="@+id/editInputN"
         android:layout_width="wrap_content"
@@ -92,7 +103,7 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputN" />
+        app:layout_constraintTop_toBottomOf="@id/textText" />
 
     <Button
         android:layout_width="wrap_content"
@@ -104,10 +115,10 @@
         android:backgroundTint="#FFFFFF"
         android:background="@drawable/my_background"
         android:layout_marginTop="4dp"
-        android:text="Вывести слова в неотсортированном порядке"
-        android:textColor="@color/black"
         android:enabled="false"
-        />
+        android:text="Показать текст"
+        android:textColor="@color/black"
+        android:textAllCaps="false" />
     <Button
         android:layout_width="wrap_content"
         android:id="@+id/butTwo"

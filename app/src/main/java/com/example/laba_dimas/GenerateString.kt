@@ -3,52 +3,36 @@ package com.example.laba_dimas
 class GenerateString(var n : Int) {
     private var listBig : MutableList<String> = mutableListOf()
     private var listLittle : MutableList<String> = mutableListOf()
-    fun generatebigString() : String{
-        if(listBig.size==20){
-            listBig.clear()
+
+    private var text : String = "1 111 222 3333 44444 555555 4854054904 1 53 53ш53 ооыолпып"
+    var textSeparated = text.split(" ").toTypedArray() // разбиваем строку на пробелы
+
+    fun sort(length : Int){ // разместил по массивам
+        for(i in textSeparated.indices){
+            if(textSeparated[i].length>=length){
+                listBig.add(textSeparated[i])
+            }
+            else{
+                listLittle.add(textSeparated[i])
+            }
         }
-        var allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
-        var string : String
-
-
-        string = (1..((n+1)..(n+10)).random())
-            .map { allowedChars.random() }
-            .joinToString("")
-        listBig.add(string)
-            return string
     }
 
-    fun generateLittleString() : String{
-        if(listLittle.size==20){
-            listLittle.clear()
-        }
-        var allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
-        var string : String
-        string = (1..(1..n).random())
-            .map { allowedChars.random() }
-            .joinToString("")
-        listLittle.add(string)
-        return string
-    }
-
-    fun sort_little() : MutableList<String>{
-        listLittle.sortBy { it.length }
+    fun getLittle() : MutableList<String>{
         return listLittle
     }
 
-    fun sort_big() : MutableList<String>{
-        listBig.sortBy { it.length }
-        return listBig
+    fun getBig() : MutableList<String>{
+            return  listBig
     }
 
-    fun set_n(n: Int){
-        this.n=n
+    fun getText() : String{
+        return text
     }
 
-    fun clear(){
-        listLittle.clear()
-        listBig.clear()
-        this.n=0
+    fun clearStringSorted(){
+        listBig= mutableListOf()
+        listLittle= mutableListOf()
     }
 
 
